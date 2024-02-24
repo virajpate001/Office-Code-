@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="number"], select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    #result {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <form id="calculator">
+        <label for="states">States:</label>
+        <select id="states" required>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <!-- Add more states here -->
+        </select>
+        <label for="monthlyBill">Monthly Bill:</label>
+        <input type="number" id="monthlyBill" min="0" step="1000" required>
+        <label for="consumerType">Consumer Type:</label>
+        <select id="consumerType" required>
+            <option value="Residential">Residential</option>
+            <option value="Commercial/Industrial">Commercial/Industrial</option>
+        </select>
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            var monthlyBill = parseInt(document.getElementById('monthlyBill').value);
+            var consumerType = document.getElementById('consumerType').value;
+            var solarCapacity;
+            var areaRequired;
+            var carbonEmission;
+            var treesPlanted;
+            var totalCost;
+            var yearlySavings;
+            var  lifetimeSavings;
+            var irr;
+            var roi;
+           
+           if (monthlyBill < 1000) {
+            alert("Please Select Value Above 1000");
+             document.getElementById('result').innerHTML = "";
+           } else if (monthlyBill >= 1000 && consumerType === 'Residential') {
+                solarCapacity = Math.ceil(monthlyBill / 1000);
+                areaRequired = solarCapacity * 100;
+                carbonEmission = solarCapacity * 28; // Corrected calculation
+                treesPlanted = solarCapacity * 45;
+                totalCost = solarCapacity * 60000;
+                yearlySavings = solarCapacity * 10528;
+                lifetimeSavings = solarCapacity * 233909.67;
+                irr = 16.23;
+                roi = 6;
+
+                document.getElementById('result').innerHTML = `
+                <p>Solar Plant Required Capacity: ${solarCapacity} kW</p>
+                <p>Area Required: ${areaRequired} Sq. ft</p>
+                <p>Carbon Emission: ${carbonEmission}</p>
+                <p>Trees Planted: ${treesPlanted}</p>
+                <p>Total Cost: ${totalCost}</p>
+                <p>Yearly Savings: ${yearlySavings}</p>
+                <p>Lifetime Savings: ${lifetimeSavings}</p>
+                <p>IRR : ${irr}</p>
+                <p>ROI  : ${roi}</p>
+            `;
+
+            } else if(monthlyBill >= 1000 && consumerType === 'Commercial/Industrial'){
+               solarCapacity = Math.ceil(monthlyBill / 1000);
+               areaRequired = solarCapacity * 100;
+               carbonEmission = solarCapacity * 28;
+               treesPlanted = solarCapacity * 45;
+               totalCost = solarCapacity * 50000;
+               yearlySavings = solarCapacity * 13160;
+               lifetimeSavings = solarCapacity * 584774.18;
+                irr = 25.25;
+                roi = 4;
+
+                document.getElementById('result').innerHTML = `
+                <p>Solar Plant Required Capacity: ${solarCapacity} kW</p>
+                <p>Area Required: ${areaRequired} Sq. ft</p>
+                <p>Carbon Emission: ${carbonEmission}</p>
+                <p>Trees Planted: ${treesPlanted}</p>
+                <p>Total Cost: ${totalCost}</p>
+                <p>Yearly Savings: ${yearlySavings}</p>
+                <p>Lifetime Savings: ${lifetimeSavings}</p>
+                <p>IRR : ${irr}</p>
+                <p>ROI  : ${roi}</p>
+            `;
+
+            } else {
+                solarCapacity = 0;
+                areaRequired = 0;
+                carbonEmission = 0;
+                treesPlanted = 0; 
+                yearlySavings = 0;
+                lifetimeSavings = 0;
+                irr = 0;
+                roi = 0;
+            }
+
+            
+        }
+    </script>
+</body>
+</html>
