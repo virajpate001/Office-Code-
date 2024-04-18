@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdowns</title>
+ 
+
+  <style type="text/css">
+    .container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select, button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+   <label for="dealer">Select Dealer:</label>
+<select id="dealer">
+  <option value="Dealer 1">Dealer 1</option>
+ 
+</select>
+
+<label for="state">Select State:</label>
+<select id="state">
+   <option value="">Select State</option>
+  <option value="andaman">Andaman</option>
+  <option value="andhra-pradesh">ANDHRA PRADESH</option>
+   <option value="arunachalpradesh">ARUNANCHAL PRADESH</option>
+</select>
+
+<label for="city">Select City:</label>
+<select id="city">
+  <option value="">Select a City</option>
+  <!-- Cities will be populated dynamically based on the selected state -->
+</select>
+
+<button id="submitBtn">Submit</button>
+
+<div id="shoData">
+  
+</div>
+  </div>
+
+  <script>
+    
+   document.addEventListener('DOMContentLoaded', function() {
+  const stateDropdown = document.getElementById('state');
+  const cityDropdown = document.getElementById('city');
+
+  // Define cities for each state
+  const citiesByState = {
+    andaman: ['Port Blair'],
+    state2: ['City X', 'City Y', 'City Z'],
+    state3: ['City P', 'City Q', 'City R']
+  };
+
+  // Map selected options to company information
+  const companyInfo = {
+    'Dealer 1_andaman_Port Blair': {
+      dealername : 'PRIDE TECH ENGINEERING WORKS',
+      state: 'Andaman And Nicobar Island',
+      district: 'South Andaman',
+      address: 'Shop No.3, 1ST Floor, Cari Road, Bathubasti, Port Blair, South Andman-744105'
+    },
+    'Dealer 1_state1_City B': {
+      dealername : 'HEMA SAI AGENCIES',
+      state: 'Andhra Pradesh',
+      district: 'Guntur',
+      address: 'D.NO.16-1-237, CHILLAKALURIPETH ROAD, NARASARAOPETH-522601'
+    },
+    'Dealer 1_state1_City C': {
+      company: 'Another Company',
+      address: 'Another Address',
+      state: 'Another State',
+      name: 'Dass',
+    },
+     'Dealer 1_state3_City P': {
+    company: 'Company PQR',
+    address: 'XYZ Address',
+    state: 'State XYZ'
+    },
+     'Dealer 1_state3_City Q': {
+    company: 'Company PQR',
+    address: 'XYZ Address',
+    state: 'State XYZ'
+    },
+  
+    
+
+  };
+
+  // Function to populate city dropdown based on selected state
+  function populateCities() {
+    const selectedState = stateDropdown.value;
+    const cities = citiesByState[selectedState] || [];
+ 
+    cityDropdown.innerHTML = '<option value="">Select a City</option>';
+    cities.forEach(city => {
+      const option = document.createElement('option');
+     
+      option.value = city;
+    
+      option.textContent = city;
+     
+      cityDropdown.appendChild(option);
+
+    });
+  }
+
+  // Event listener for state dropdown change
+  stateDropdown.addEventListener('change', populateCities);
+
+  // Event listener for submit button click
+    document.getElementById('submitBtn').addEventListener('click', function() {
+    const selectedDealer = document.getElementById('dealer').value;
+    const selectedState = stateDropdown.value;
+    const selectedCity = cityDropdown.value;
+
+    // Form a key based on selected options
+    const key = `${selectedDealer}_${selectedState}_${selectedCity}`;
+    console.log(key);
+    
+    // Fetch company information based on the key
+    const info = companyInfo[key];
+   
+
+    // Display company information
+    if (info) {
+      // alert(`Company: ${info.company}\nAddress: ${info.address}\nState: ${info.state}\nName: ${info.name}`);
+
+      let data = document.getElementById("shoData");
+        
+      data.innerHTML = `Dealer Name: ${info.dealername}  <br> State: ${info.state} <br> District: ${info.district} <br> Address: ${info.address}`; 
+
+    } else {
+      alert('No information found for the selected options.');
+    }
+  });
+});
+
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdowns</title>
+ 
+
+  <style type="text/css">
+    .container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select, button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+   <label for="dealer">Select Dealer:</label>
+<select id="dealer">
+  <option value="Dealer 1">Dealer 1</option>
+ 
+</select>
+
+<label for="state">Select State:</label>
+<select id="state">
+   <option value="">Select State</option>
+  <option value="andaman">Andaman</option>
+  <option value="andhra-pradesh">ANDHRA PRADESH</option>
+   <option value="arunachalpradesh">ARUNANCHAL PRADESH</option>
+</select>
+
+<label for="city">Select City:</label>
+<select id="city">
+  <option value="">Select a City</option>
+  <!-- Cities will be populated dynamically based on the selected state -->
+</select>
+
+<button id="submitBtn">Submit</button>
+
+<div id="shoData">
+  
+</div>
+  </div>
+
+  <script>
+    
+   document.addEventListener('DOMContentLoaded', function() {
+  const stateDropdown = document.getElementById('state');
+  const cityDropdown = document.getElementById('city');
+
+  // Define cities for each state
+  const citiesByState = {
+    andaman: ['Port Blair'],
+    state2: ['City X', 'City Y', 'City Z'],
+    state3: ['City P', 'City Q', 'City R']
+  };
+
+  // Map selected options to company information
+  const companyInfo = {
+    'Dealer 1_andaman_Port Blair': {
+      dealername : 'PRIDE TECH ENGINEERING WORKS',
+      state: 'Andaman And Nicobar Island',
+      district: 'South Andaman',
+      address: 'Shop No.3, 1ST Floor, Cari Road, Bathubasti, Port Blair, South Andman-744105'
+    },
+    'Dealer 1_state1_City B': {
+      dealername : 'HEMA SAI AGENCIES',
+      state: 'Andhra Pradesh',
+      district: 'Guntur',
+      address: 'D.NO.16-1-237, CHILLAKALURIPETH ROAD, NARASARAOPETH-522601'
+    },
+    'Dealer 1_state1_City C': {
+      company: 'Another Company',
+      address: 'Another Address',
+      state: 'Another State',
+      name: 'Dass',
+    },
+     'Dealer 1_state3_City P': {
+    company: 'Company PQR',
+    address: 'XYZ Address',
+    state: 'State XYZ'
+    },
+     'Dealer 1_state3_City Q': {
+    company: 'Company PQR',
+    address: 'XYZ Address',
+    state: 'State XYZ'
+    },
+  
+    
+
+  };
+
+  // Function to populate city dropdown based on selected state
+  function populateCities() {
+    const selectedState = stateDropdown.value;
+    const cities = citiesByState[selectedState] || [];
+ 
+    cityDropdown.innerHTML = '<option value="">Select a City</option>';
+    cities.forEach(city => {
+      const option = document.createElement('option');
+     
+      option.value = city;
+    
+      option.textContent = city;
+     
+      cityDropdown.appendChild(option);
+
+    });
+  }
+
+  // Event listener for state dropdown change
+  stateDropdown.addEventListener('change', populateCities);
+
+  // Event listener for submit button click
+    document.getElementById('submitBtn').addEventListener('click', function() {
+    const selectedDealer = document.getElementById('dealer').value;
+    const selectedState = stateDropdown.value;
+    const selectedCity = cityDropdown.value;
+
+    // Form a key based on selected options
+    const key = `${selectedDealer}_${selectedState}_${selectedCity}`;
+    console.log(key);
+    
+    // Fetch company information based on the key
+    const info = companyInfo[key];
+   
+
+    // Display company information
+    if (info) {
+      // alert(`Company: ${info.company}\nAddress: ${info.address}\nState: ${info.state}\nName: ${info.name}`);
+
+      let data = document.getElementById("shoData");
+        
+      data.innerHTML = `Dealer Name: ${info.dealername}  <br> State: ${info.state} <br> District: ${info.district} <br> Address: ${info.address}`; 
+
+    } else {
+      alert('No information found for the selected options.');
+    }
+  });
+});
+
+  </script>
+</body>
+</html>
