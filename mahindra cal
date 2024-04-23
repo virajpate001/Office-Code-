@@ -6,7 +6,7 @@
   <title>Dropdowns</title>
  
 
-  <style type="text/css">
+<style type="text/css">
     .container {
   max-width: 400px;
   margin: 0 auto;
@@ -42,23 +42,46 @@ button:hover {
 </head>
 <body>
   <div class="container">
-   <label for="dealer">Select Dealer:</label>
-<select id="dealer">
-  <option value="Dealer 1">Dealer 1</option>
- 
-</select>
+  
 
 <label for="state">Select State:</label>
 <select id="state">
    <option value="">Select State</option>
-  <option value="andaman">Andaman</option>
-  <option value="andhra-pradesh">ANDHRA PRADESH</option>
-   <option value="arunachalpradesh">ARUNANCHAL PRADESH</option>
+  <option value="andaman">Andaman And Nicobar Island</option>
+  <option value="andhra_pradesh">Andhra Pradesh</option>
+  <option value="telangana">Telangana</option>
+  <option value="assam">Assam</option>
+  <option value="bihar">Bihar</option>
+  <option value="chhattisgarh">Chhattisgarh</option>
+  <option value="delhi">Delhi</option>
+  <option value="goa">Goa</option>
+   <option value="gujarat">Gujarat</option>
+   <option value="haryana">Haryana</option>
+   <option value="himachalpradesh">Himachal Pradesh</option>
+   <option value="jammukashmir">Jammu & Kashmir</option>
+   <option value="jharkhand">Jharkhand</option>
+   <option value="karnataka">Karnataka</option>
+   <option value="kerala">Kerala</option>
+   <option value="madhya_pradesh">Madhya Pradesh</option>
+   <option value="maharashtra">Maharashtra</option>
+   <option value="meghalaya">Meghalaya</option>
+   <option value="north_east">North-East</option>
+   <option value="odisha">Odisha</option>
+   <option value="pb_hp">Pb & Hp</option>
+   <option value="punjab">Punjab</option>
+   <option value="rajasthan">Rajasthan</option>
+   <option value="tamilnadu">Tamilnadu</option>
+   <option value="telangana">Telangana</option>
+   <option value="uttar_pradesh">Uttar Pradesh</option>
+   <option value="uttarakhand">Uttarakhand</option>
+   <option value="west_bengal">West Bengal</option>
+
+  
 </select>
 
-<label for="city">Select City:</label>
+<label for="city">Select District:</label>
 <select id="city">
-  <option value="">Select a City</option>
+  <option value="">Select a District</option>
   <!-- Cities will be populated dynamically based on the selected state -->
 </select>
 
@@ -77,41 +100,1178 @@ button:hover {
 
   // Define cities for each state
   const citiesByState = {
-    andaman: ['Port Blair'],
-    state2: ['City X', 'City Y', 'City Z'],
-    state3: ['City P', 'City Q', 'City R']
+    andaman: ['South Andaman'],
+
+    andhra_pradesh: ['Guntur', 'Krishna', 'Nellore', 'Vijayanagram', 'Vijayawada'],
+
+    telangana: ['Hydrabad'],
+
+    assam: ['Guwahati','Nagaon','Sivsagar'],
+
+    bihar: ['Patna','Purnia'],
+
+    chhattisgarh: ['Durg','Raipur'],
+
+    delhi: ['delhi'],
+
+    goa: ['Margao','Panjim','Tisawad'],
+
+    gujarat: ['Vyara','Ahemadabad','Anand','Baroda','Bharuch (Pmd)','Dadra & Nagar Haveli','Daman','Dangs (Ahwa)', 'Gandhinagar', 'Himmatnagar', 'Kheda', 'Mehesana', 'Narmada (Pmd)', 'Navsari', 'Palanpur', 'Patan', 'Surat', 'Tapi', 'Vadodra', 'Valsad', 'Valsad-Vapi', 'Kutch',],
+
+    haryana: ['Ambala','Hissar','Karnal','Panipat','Rewari','Sonipat','Yamuna Nagar'],
+
+    himachalpradesh: ['Shimla'],
+
+    jammukashmir: ['Doda','Jammu','Kathua','Kishtwar','Poonch','Rajouri','Rambanreasi','Samba','Shrinagar','Udhampur','Srinagar'],
+
+     jharkhand: ['Dhanbad','Ramghar','Ranchi'],
+
+     karnataka: ['Bengluru','Bidar','Davangere','Gulbarga','Hassan','Hubali','Manglore','Mudhol','Mysoor','Mysore','Ramnagar','Shimoga'],
+
+     kerala: ['Ernakulam','Kalamssery','Palakkad','Pathanamthitta','Perla','Trivandrum'],
+
+     goa: ['Margao','Panjim','Tisawad'],
+
+     madhya_pradesh: ['Agar','Anuppur','Balaghat','Betul','Bhind','Bhopal','Chhindwara','Damoh','Dindori','Gadarwara','Gwalior','Harda','Hoshangabad','Indore','Jabalpur','Kanti','Khukshi','Mandla','Mandsour','Narshingpur','Neemuch','Raisen','Rajgarh','Ratlam','Sagar','Satna','Sehore','Seoni','Shahdol','Shajapur','Shivpuri','Tikamgarh','Ujjain','Umaria','Vidisha'],
+
+      maharashtra: ['Ahemednagar','Akola','Alipurdwar','Aurangabad','Chandrapur','Gadag','Jalgaon','Kolhapur','Mumbai','Nagpur','Nashik','New Mumbai','Palghar','Parbhani','Pune','Satara','Sindudurg','Solapur','Thane'],
+
+      meghalaya: ['Shillong'],
+
+      north_east: ['Guwahati Nesa'],
+
+       odisha: ['Bhubaneshwar','Koraput', 'Sambalpur'],
+
+       pb_hp: ['Chandigarh'],
+
+       punjab: ['Mohali'],
+
+       rajasthan: ['Alwar','Bikaner', 'Jaipur', 'Jodhpur', 'Sikara', 'Udaipur', 'Kota'],
+
+       tamilnadu: ['Chennai','Coimbture', 'Dindigul', 'Kanyakumari', 'Nagapattinaam', 'Ooty', 'Puducherry', 'Salem', 'Subhramanyapuram', 'Tanjavur', 'Thirnelvelly', 'Vellore', 'Madurai', 'Erode'],
+       
+       telangana: ['Hyderabad','Jagityal'],
+
+       uttar_pradesh: ['Agra','Aligarh','Bagpat','Bijnor','Chamoli','Etawah','Kanpur','Kashganj','Lucknow','Mathura','Meerut','Muzaffernagar','Saharanpur','Shamli','Varanasi'],
+
+        uttarakhand: ['Dehradun','Haridwar', 'Pauri Garhwal', 'Rudraprayag', 'Tehri Garhwal', 'Uttarkashi', 'Haldwani'],
+
+        west_bengal: ['Alipurduar','Bankura', 'Birbhim','Both Dinajpur','Burdhwan','Coochbehar','Darjeeling','East Burdwan','East Medinipur','Hawrah','Hoogly','Jalpaiguri','Jhargram','Kalimpong','Kolkata','Malda','Murshidabad','Nadiya','North 24 Parganas','Puruliya','Siliguri','South 24 Parganas','South 24 Pgs','West Burdwan','West Medinipur',],
   };
 
   // Map selected options to company information
   const companyInfo = {
-    'Dealer 1_andaman_Port Blair': {
+    'andaman_South Andaman': {
       dealername : 'PRIDE TECH ENGINEERING WORKS',
-      state: 'Andaman And Nicobar Island',
-      district: 'South Andaman',
-      address: 'Shop No.3, 1ST Floor, Cari Road, Bathubasti, Port Blair, South Andman-744105'
+      
+      address: '<br>Shop No.3, 1ST Floor, Cari Road, Bathubasti, Port Blair, South Andman-744105'
     },
-    'Dealer 1_state1_City B': {
+
+
+    'andhra_pradesh_Guntur': {
       dealername : 'HEMA SAI AGENCIES',
-      state: 'Andhra Pradesh',
-      district: 'Guntur',
-      address: 'D.NO.16-1-237, CHILLAKALURIPETH ROAD, NARASARAOPETH-522601'
+      
+      address: '<br>D.NO.16-1-237, CHILLAKALURIPETH ROAD, NARASARAOPETH-522601'
     },
-    'Dealer 1_state1_City C': {
-      company: 'Another Company',
-      address: 'Another Address',
-      state: 'Another State',
-      name: 'Dass',
+    'andhra_pradesh_Krishna': {
+      dealername : 'RAMKRISHNA MARASAKATLA',
+      
+      address: '<br>Vissannapeta, Krishna-521215'
     },
-     'Dealer 1_state3_City P': {
-    company: 'Company PQR',
-    address: 'XYZ Address',
-    state: 'State XYZ'
+    'andhra_pradesh_Nellore': {
+      dealername : 'COSTAL POWER CARE ENGINEER',
+      
+      address: '<br>26-14-818, 1st Floor, Mini By Pass Road, Near BJP Office, B.V.Nagar, Nellore-524004'
     },
-     'Dealer 1_state3_City Q': {
-    company: 'Company PQR',
-    address: 'XYZ Address',
-    state: 'State XYZ'
+    'andhra_pradesh_Vijayanagram': {
+      dealername : 'SIRICHANDANA MARKETING',
+      
+      address: '<br>BALAJI JUNCTION, RING ROAD'
     },
+    'andhra_pradesh_Vijayawada': {
+      dealername : 'LAKSHMI SAI SALES & SERVICE',
+      
+      address: '<br><br><strong>Address 1: </strong><br>59/5-1c,keerthi app,3rd road thangallmudevarevedi,gurunanakcolony,j autoneger,vijayawada 520010,krishnadt,andrapradesh,india.<br><br><strong>Address 2: </strong><br>Shop no 2,Flat no.124,Block no.8,Near Chalam Radiators,2nd cross,4th road,J.AUTONAGAR.VIJAYAWADA'
+    },
+    'telangana_Hydrabad': {
+      dealername : 'SIRICHANDANA MARKETING',  
+      address: '<br>Subbarao Colony, West maredpally, Secunderabad'
+    },
+     'assam_Guwahati': {
+      dealername : 'HARINETRA INFRASTRUCTURE',  
+      address: '<br>27 DEVAYAN PATH, MANIK NAGAR, R.G. BARUAH ROAD,JAPORIGOG, GUWAHATI-781005, ASSAM'
+    },
+    'assam_Nagaon': {
+      dealername : 'SHREE BHAWANI ELECTRICAL WORKS',  
+      address: '<br>Srimanth Sankardev Peth, Dhing Road, Haibargaon, Nagaon-782002, Assam'
+    },
+    'assam_Sivsagar': {
+      dealername : 'R ALLI WORKSHOP',  
+      address: '<br>Balighat, P.O. Nazira'
+    },
+
+         // bihir 
+    'bihar_Patna': {
+      dealername : 'VISHWAKARMA POWER SOLUTION',  
+      address: '<br>Bipin Bihari Complax Room No.205 (2nd Floor) Janta Path  Kankarbagh,Patna-800020'
+    },
+    'bihar_Purnia': {
+      dealername : 'SHRUTI ENTERPRISES',  
+      address: '<br>Ram Nagar Purnia, Bihar-854303'
+    },
+
+      // Chhattisgarh 
+    'chhattisgarh_Durg': {
+      dealername : 'RIDDHI SIDDHI ENTERPRISES',  
+      address: '<br>RAJENDRA PARK CHAOWK, GE ROAD DURG'
+    },
+    'chhattisgarh_Raipur': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: '<br>Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+      // delhi 
+    'delhi_delhi': {
+      dealername : 'ADITYA ENTERPRISES',  
+      address: '<br>Near Krishna Medical ,H No 402 E block Saraswati Enclave Gurugram Haryana 122001'
+    },
+
+     // Goa 
+    'goa_Margao': {
+      dealername : 'PRABHA TECHNICAL RESOURCE',  
+      address: '<br>SF-B-Phase, Andraday Receidancy, borda margao Goa.'
+    },
+    'goa_Panjim': {
+      dealername : 'POWERTECH LOGIC',  
+      address: '<br>GOA'
+    },
+    'goa_Tisawad': {
+      dealername : 'NILESH MORASKAR',  
+      address: '<br>52, Ansuya apt, Amaral Waddo, Talegaon, Tisawad- Goa'
+    },
+
+     // Gujarat
+
+     'gujarat_Vyara': {
+      dealername : 'PRAMUKH DIESELS',  
+      address: '<br>A-9, Green Park Light Ind Estate, Surat-Sachin Main Road, Unn, Sura'
+    },
+    'gujarat_Ahemadabad': {
+      dealername : '',  
+      address: '<br><br><strong>Address 1: </strong><br><strong>GARVI ENTERPRISES</strong><br>201, Kaivanna, Panchwati Circle, Ambawadi, Ahmedabad-380006<br><br><strong>Address 2: </strong><br><strong>JANKI AUTONOMOUS</strong><br>901,B, SILVER HARMONY, GOTA, AHEMADABAD-382481, GUJRAT<br><br><strong>Address 3: </strong><br><strong>BR ENTERPRISES</strong><br>B10, Punlin Park, Nr. Vera, Ratnba School<br><br><strong>Address 4: </strong><br><strong>GARVI ENTERPRISES </strong><br>D/A-6, SHRINATH APARTMENT,HANSOL , AHMEDABAD – 382475'
+    },
+
+    'gujarat_Anand': {
+      dealername : 'INDRA ENTERPRISE',  
+      address: '<br>Shop no.73/p, Chandra Tower, Anand Chowkadi Borsad'
+    },
+
+    'gujarat_Baroda': {
+      dealername : 'JAY NARAYAN ENTERPRISES ',  
+      address: '<br>Jayshree Complax Baroda'
+    },
+
+    'gujarat_Bharuch (Pmd)': {
+      dealername : 'PRAMUKH DIESELS ',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura'
+    },
+
+    'gujarat_Dadra & Nagar Haveli': {
+      dealername : 'PRAMUKH DIESELS',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura'
+    },
+
+    'gujarat_Daman': {
+      dealername : 'PRAMUKH DIESELS',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura'
+    },
+
+    'gujarat_Dangs (Ahwa)': {
+      dealername : 'PRAMUKH DIESELS',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura'
+    },
+
+    'gujarat_Gandhinagar': {
+      dealername : 'GARVI ENTERPRISES ',  
+      address: '<br>D/A-6, SHRINATH APARTMENT,HANSOL , AHMEDABAD – 382475'
+    },
+
+    'gujarat_Himmatnagar': {
+      dealername : 'GARVI ENTERPRISES ',  
+      address: '<br>D/A-6, SHRINATH APARTMENT,HANSOL , AHMEDABAD – 382475'
+    },
+
+    'gujarat_Kheda': {
+      dealername : 'GARVI ENTERPRISES ',  
+      address: '<br>D/A-6, SHRINATH APARTMENT,HANSOL , AHMEDABAD – 382475'
+    },
+
+    'gujarat_Mehesana': {
+      dealername : 'RELIANCE SALES AGENCY',  
+     address: '<br><br><strong>Address 1: </strong><br><strong>GARVI ENTERPRISES</strong><br>2/ kapadia chembar, under krishna diesels, neae SBI, state highway Mehesana<br><br><strong>Address 2: </strong><br><strong>GARVI ENTERPRISES </strong><br>D/A-6, SHRINATH APARTMENT,HANSOL , AHMEDABAD – 382475'
+    },
+
+     'gujarat_Narmada (Pmd)': {
+      dealername : 'PRAMUKH DIESELS',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura'
+    },
+
+    'gujarat_Navsari': {
+      dealername : 'PRAMUKH DIESELS',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura'
+    },
+
+    'gujarat_Palanpur': {
+      dealername : 'GARVI ENTERPRISES ',  
+      address: '<br>D/A-6, SHRINATH APARTMENT,HANSOL , AHMEDABAD – 382475'
+    },
+
+     'gujarat_Patan': {
+      dealername : 'GARVI ENTERPRISES ',  
+      address: '<br>D/A-6, SHRINATH APARTMENT,HANSOL , AHMEDABAD – 382475'
+    },
+
+     'gujarat_Surat': {
+      dealername : 'PRAMUKH DIESELS ',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura'
+    },
+
+    'gujarat_Tapi': {
+      dealername : 'PRAMUKH DIESELS ',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura'
+    },
+
+    'gujarat_Vadodra': {
+      dealername : 'PROFICIENT ENGINEERS',  
+      address: '<br>B-18, Yogeshwar Society, Novino-Tarsali Road,Vadodara - 390009, Gujarat '
+    },
+
+    'gujarat_Valsad': {
+      dealername : 'PRAMUKH DIESELS',  
+      address: '<br>A-9, Green Park Light Ind Estate,Surat-Sachin Main Road,Unn, Sura '
+    },
+
+    'gujarat_Valsad-Vapi': {
+      dealername : 'GARVI ENTERPRISES ',  
+      address: '<br>D/A-6, SHRINATH APARTMENT,HANSOL , AHMEDABAD – 382475 '
+    },
+
+     'gujarat_Kutch': {
+      dealername : 'PERFECT ENTERPRISE ',  
+      address: '<br>House nos 155 Mahesheari Nagar '
+    },
+   
+    //Haryana
+     'haryana_Ambala': {
+      dealername : 'SHARMA ENTERPRISES ',  
+      address: '<br>21 GORAV PARK, AMBALA CANT, AMBALA-133001, HARYANA '
+    },
+
+    'haryana_Hissar': {
+      dealername : 'C & S POWER SOLUTION ',  
+      address: '<br>176-B, Behind Apolo Tyer, C&F Vikas Nagar, Barawala Road, Hissar-125001 '
+    },
+
+     'haryana_Karnal': {
+      dealername : 'SHARMA ENTERPRISES ',  
+      address: '<br>21 GORAV PARK, AMBALA CANT, AMBALA-133001, HARYANA '
+    },
+
+    'haryana_Panipat': {
+      dealername : 'SHARMA ENTERPRISES ',  
+      address: '<br>21 GORAV PARK, AMBALA CANT, AMBALA-133001, HARYANA '
+    },
+
+    'haryana_Rewari': {
+      dealername : 'SVAM POWER PLANTS PVT. LTD.',  
+      address: '<br>Near New Police Line, Delhi-Rewari Road '
+    },
+
+    'haryana_Sonipat': {
+      dealername : 'SHARMA ENTERPRISES',  
+      address: '<br>21 GORAV PARK, AMBALA CANT, AMBALA-133001, HARYANA'
+    },
+
+    'haryana_Yamuna Nagar': {
+      dealername : 'SHARMA ENTERPRISES',  
+      address: '<br>21 GORAV PARK, AMBALA CANT, AMBALA-133001, HARYANA'
+    },
+
+    //Himachal Pradesh
+
+    'himachal-pradesh_Shimla': {
+      dealername : 'DAKSHESH INFRA SOLUTIONS',  
+      address: 'NA'
+    },
+
+    //Jammu & Kashmir
+
+    'jammukashmir_Doda': {
+      dealername : 'SHRIKUL TRACTORS',  
+      address: '<br>NH-1-A-Patil Morh, Bari Bramhana, Jammu- 181133'
+    },
+
+     'jammukashmir_Jammu': {
+      dealername : 'SHRIKUL TRACTORS',  
+      address: '<br>NH-1-A-Patil Morh, Bari Bramhana, Jammu- 181133'
+    },
+
+    'jammukashmir_Kathua': {
+      dealername : 'SHRIKUL TRACTORS',  
+      address: '<br>NH-1-A-Patil Morh, Bari Bramhana, Jammu- 181133'
+    },
+
+    'jammukashmir_Kishtwar': {
+      dealername : 'SHRIKUL TRACTORS',  
+      address: '<br>NH-1-A-Patil Morh, Bari Bramhana, Jammu- 181133'
+    },
+
+    'jammukashmir_Poonch': {
+      dealername : 'SHRIKUL TRACTORS',  
+      address: '<br>NH-1-A-Patil Morh, Bari Bramhana, Jammu- 181133'
+    },
+
+    'jammukashmir_Rambanreasi': {
+      dealername : 'SHRIKUL TRACTORS',  
+      address: '<br>NH-1-A-Patil Morh, Bari Bramhana, Jammu- 181133'
+    },
+
+    'jammukashmir_Samba': {
+      dealername : 'SHRIKUL TRACTORS',  
+      address: '<br>NH-1-A-Patil Morh, Bari Bramhana, Jammu- 181133'
+    },
+
+     'jammukashmir_Shrinagar': {
+      dealername : 'DAR ENGINEERING WORKS',  
+      address: '<br>NATIONAL HIGHWAY ROAD BYE-PASS LASJAN SRINAGAR. 191101'
+    },
+
+    'jammukashmir_Udhampur': {
+      dealername : 'SHRIKUL TRACTORS',  
+      address: '<br>NH-1-A-Patil Morh, Bari Bramhana, Jammu- 181133'
+    },
+
+     'jammukashmir_Srinagar': {
+      dealername : 'AEE DEE ENGINEERING WORKS',  
+      address: '<br>SHRINAGAR'
+    },
+
+     //Jharkhand
+     'jharkhand_Dhanbad': {
+      dealername : 'VIDHYANCHAL ENTERPRISES',  
+      address: '<br>katrash road matkuriya dhanbad 826001'
+    },
+
+     'jharkhand_Ramghar': {
+      dealername : 'TECHNO CURE',  
+      address: '<br>Argada Bazar, Ramghar Cantt, Ramghar-829101'
+    },
+
+     'jharkhand_Ranchi': {
+      dealername : 'GOVIND ENTERPRISES',  
+      address: '<br>Ayodhyapuri Road No-4, Lower Chutia, Ranchi-834001'
+    },
+
+    //Karnataka
+    'karnataka_Bengluru': {
+      dealername : '',  
+      address: '<br><br><strong>Address 1: </strong><br><strong>SR SERVICES</strong><br>Authorised of KEC- 28/1, 3rd Temple Road, 15th Cross, Maleswaram, Bengaluru<br><br><strong>Address 2: </strong><br><strong>WATTS POWER TECHNOLOGIES INDIA PVT LTD</strong><br>No.26/5,Raghavendra Industrial Estate,Rajiv Gandhi road,Jarganahalli,J O nagar,Bangalore-560078<br><br><strong>Address 3: </strong><br><strong>POWERLINE SOLUTIONS</strong><br>131, Behind Metro Station, Jyotinagar, Mysore Road, Bengluru-560039'
+    },
+
+    'karnataka_Bidar': {
+      dealername : 'RAJATA ENTERPRISES',  
+      address: '<br>GP.No.114/2, Rajeshwar TQ-Basavkalyan-585331, Bidar, KA.'
+    },
+
+     'karnataka_Davangere': {
+      dealername : 'PERFECT SERVICE CENTER',  
+      address: '<br>Opp. Varma Machin Tools, Bilal Compound, Davangeri'
+    },
+
+     'karnataka_Gulbarga': {
+      dealername : 'SHIVANSH ENTERPRISES',  
+      address: '<br>1, SILVER APT. NEAR RAJESHWARI HOTEL, VASANT NAGAR, MSK MILL RD. GULBARGA-585102'
+    },
+     'karnataka_Hassan': {
+      dealername : 'INNOVATIVE POWER GENERATORS',  
+      address: '<br>Opp. SDM Ayurvedic Collage & Hospital, Thanneeruhalla, M.B.Road, Hassan-573201'
+    },
+    'karnataka_Hubali': {
+      dealername : 'ARISE POWER GENERATION',  
+      address: '<br>HUBALI'
+    },
+    'karnataka_Manglore': {
+      dealername : 'SHREYAS GEN SET SERVICE',  
+      address: '<br>Kadri Temple New Road,Sesu Poojary Compound,Kadri,Bejai Post,Mangalore-575004'
+    },
+    'karnataka_Mudhol': {
+      dealername : 'SAI POWER EQUIPMENTS & CO.',  
+      address: '<br>Shop No: 140, D Block, Shinde Complex Neeligin Road'
+    },
+    'karnataka_Mysoor': {
+      dealername : 'GIRISH ENERPRISES',  
+      address: '<br>621/100 FEET ROAD, OPP. TO MASJID, MYSOOR-57004'
+    },
+    'karnataka_Mysore': {
+      dealername : 'J&K POWER SOLUTION',  
+      address: '<br>406,2n, Floor, 16th, Main, B-Block, Vijayanagar, 3rd Stage Mysore Co.'
+    },
+    'karnataka_Ramnagar': {
+      dealername : 'SRI ANNAPOORNESHWARI ENTERPRISES',  
+      address: '<br>Chikkamalur, beside HP Petrol Bunk, B.M. Road Channapatna-562160'
+    },
+    'karnataka_Shimoga': {
+      dealername : 'VSK ENTERPRISES',  
+      address: '<br>S.N.H. Complex, N.T.Road, Shimoga-577201'
+    },
+
+    //Kerala
+     'kerala_Ernakulam': {
+      dealername : 'GURU POWER SOLUTIONS',  
+      address: '<br>FISHARMAN COLONY ROAD'
+    },
+
+    'kerala_Kalamssery': {
+      dealername : 'CORNIER GENERATOR SALES & SERVICES',  
+      address: '<br>39/397, Plot No.72, Major Industrial Estate, Devolopment Plot P.O, South Kalmsarry, Cochi-683104'
+    },
+
+    'kerala_Palakkad': {
+      dealername : 'PALAKKAD DIESEL',  
+      address: '<br>R.No. Ox/111/385, Ezhuvanthala, Palakkad, Kerala.'
+    },
+
+    'kerala_Pathanamthitta': {
+      dealername : 'YAASHA DIESELS',  
+      address: '<br>Thiruvall, Pathanamthitta'
+    },
+
+    'kerala_Perla': {
+      dealername : 'EXCEL BATTERYS WORKS',  
+      address: '<br>K.B.H. Complex, Main Road Perla-671552'
+    },
+
+     'kerala_Trivandrum': {
+      dealername : 'ELECTRO WORLD',  
+      address: '<br>MAIN ROAD, NEAR REVENUE COMPLAX, BALRAMPURAM, THIRUANANTPURAM'
+    },
+
+    //Madhya Pradesh
+
+     'madhya_pradesh_Agar': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>HOUSE NO D 5, TILAK NAGAR,E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+    'madhya_pradesh_Anuppur': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: '<br>Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+     'madhya_pradesh_Balaghat': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     'madhya_pradesh_Betul': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     'madhya_pradesh_Bhind': {
+      dealername : 'CHAMBAL AUTOMOBILES',  
+      address: '<br>Dev Nagar Colony, Etawah Road, Bhind-477001'
+    },
+     'madhya_pradesh_Bhopal': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+    'madhya_pradesh_Chhindwara': {
+      dealername : '',  
+       address: '<br><br><strong>Address 1: </strong><br><strong>KSHITIJ INFORMATICS</strong><br>HOUSE NO D 5, TILAK NAGAR,E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039<br><br><strong>Address 2: </strong><br><strong>SOLAR BATTERY </strong><br>VAISHNAV COMPLAX, I/O ALKA TALKIES, CHINDWARA'
+    },
+    'madhya_pradesh_Damoh': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: '<br>Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+    'madhya_pradesh_Dindori': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: '<br>Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+    'madhya_pradesh_Gadarwara': {
+      dealername : 'MAHAVIR MOTORS',  
+      address: '<br>60-61, Krishi Upaj Mandi Complax, Gadarwara'
+    },
+
+     'madhya_pradesh_Gwalior': {
+      dealername : 'RAVI COMMUNICATIION',  
+      address: 'NA'
+    },
+
+     'madhya_pradesh_Harda': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: 'HOUSE NO D 5, TILAK NAGAR,E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+    'madhya_pradesh_Hoshangabad': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: 'HOUSE NO D 5, TILAK NAGAR,E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     'madhya_pradesh_Indore': {
+      dealername : 'PRATAP INFRACREATION PVT LTD',  
+      address: 'NEAR BOMBAY HOSPITAL OF RING RD. INDORE'
+    },
+
+     'madhya_pradesh_Jabalpur': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: 'Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+    'madhya_pradesh_Kanti': {
+      dealername : 'SHANTI ENTERPRISES',  
+      address: 'Near Hotel Radhika, New Bus Stand, Kanti-483501'
+    },
+
+    'madhya_pradesh_Katni': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: 'Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+    'madhya_pradesh_Khukshi': {
+      dealername : 'POWER AUTO ELECTRIC REPAIRS',  
+      address: 'Alirajpur road, Khukshi-454331'
+    },
+
+      'madhya_pradesh_Mandla': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: 'Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+     'madhya_pradesh_Mandsour': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: 'HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+    'madhya_pradesh_Mandsour': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: 'HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     'madhya_pradesh_Narshingpur': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: 'Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+    'madhya_pradesh_Neemuch': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: 'HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     'madhya_pradesh_Raisen': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: 'HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     'madhya_pradesh_Ratlam': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: 'HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+    'madhya_pradesh_Sagar': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: 'HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     'madhya_pradesh_Satna': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>PANNA NAKA CIVIL LINE SATNA'
+    },
+
+     'madhya_pradesh_Seoni': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+    'madhya_pradesh_Shahdol': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: '<br>Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+    'madhya_pradesh_Shajapur': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+    'madhya_pradesh_Shivpuri': {
+      dealername : 'KISAN TRACTORS PARTS',  
+      address: '<br>A.B. ROAD, KOLARAS, SHIVPURI'
+    },
+
+    'madhya_pradesh_Tikamgarh': {
+      dealername : 'JAI GURU TRADING COMPANY',  
+      address: '<br>Old Bus Stand Tikamgarh-472001'
+    },
+
+     'madhya_pradesh_Ujjain': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     'madhya_pradesh_Umaria': {
+      dealername : 'SAI INFRATEL PRIVATE LIMITED',  
+      address: '<br>Ward No.43, 280 Vrindavan Colony (Nayamundapara) Jagdalpur (CG)494001'
+    },
+
+    'madhya_pradesh_Vidisha': {
+      dealername : 'KSHITIJ INFORMATICS',  
+      address: '<br>HOUSE NO D 5, TILAK NAGAR, E 8 EXT, BAWADIA KALAN, Behind of Near Canera Bank BHOPAL, Madhya Pradesh-462039'
+    },
+
+     // Maharashtra
+
+     'maharashtra_Ahemednagar': {
+      dealername : 'UNIQUE SALES & SERVICES',  
+      address: '<br>202, Kanchan Mrug Apartment, Swami Vivekanand Colony, bihind Bhide Hospital, Savedi, Ahemednagar-414003'
+    },
+
+     'maharashtra_Akola': {
+      dealername : 'SAMARTH ENTERPRISES',  
+      address: '<br>Vitthal Nagar, Mothal Umari, Akola-444005'
+    },
+
+    'maharashtra_Alipurdwar': {
+      dealername : 'DOOARS AUTOMOBILE GARAGE',  
+      address: '<br>SubhashPally, Samuktala Road, P.O. & Dist.Alipurdwar-736121'
+    },
+
+    'maharashtra_Aurangabad': {
+      dealername : 'BALAJI ELECTRICALS',  
+      address: '<br>Naregaon Road No.3, Chikal Thana MIDC, Area Aurangabad -431007'
+    },  
+
+      'maharashtra_Chandrapur': {
+      dealername : 'MATRUCHAYA AUTO ELECTRICAL',  
+      address: '<br>Siddhivinayak Complax,Warora MH'
+    },  
+
+      'maharashtra_Gadag': {
+      dealername : 'POWER ZONE',  
+      address: '<br>Garag Plaza, Mulgund Naka, Hubali Road, Gadag-582103, KA'
+    }, 
+
+    'maharashtra_Jalgaon': {
+      dealername : 'YASHAPRAPTI ENTERPRISES',  
+      address: '<br>15, Veer Savarkar Market, Near Sivil Hospital, Chopada, Jalgaon-425107'
+    },  
+
+    'maharashtra_Kolhapur': {
+      dealername : 'SAMARTH ELECTRICALS',  
+      address: '<br>1460, C Prabhawalkar Complex, Shubhash Road, Laxmipuri, Kolhapur-416002'
+    }, 
+
+    'maharashtra_Mumbai': {
+      dealername : '',  
+      address: '<br><br><strong>Address 1: </strong><br><strong>DEV ENTERPRISES</strong><br>546,34-PANHALGAD, RAM NAGAR, GHATKOPAR(w) MUM-400086<br><br><strong>Address 2: </strong><br><strong>FUSION ENGINEER & TECHNOCRAT</strong><br>shop nos 6 casas apartment plot nos 140 kamothe Navi mumbai 410206'
+    }, 
+
+     'maharashtra_Nagpur': {
+      dealername : 'GAJANAN GENERATOR PVT LTD',  
+      address: '<br>M/s. Gajanan Generators Pvt Ltd; C/o.Mr Ramesh Lokhande; Plot No.7/5; Jyoti, Vriksha Apartment; Opp. Arun Automobile; Ghat Road, Nagpur,Maharashtra..Pin code: 440 018'
+    }, 
+
+      'maharashtra_Nashik': {
+      dealername : 'SHANTAY SERVICES',  
+      address: '<br>Nashik'
+    }, 
+
+     'maharashtra_New Mumbai': {
+      dealername : 'FUSION ENGINEERING AND TECHNOCARTS',  
+      address: '<br>Shop no. 06, Coses Apartment, Plot no. 140, Kamothe New Mumbai-27'
+    }, 
+
+      'maharashtra_Palghar': {
+      dealername : 'JEEVDANI TECHNOLOIES',  
+      address: '<br>Shop No.03, Building No.02, Shivkala Arcade, Near Kotak Mahindra Bank, Boisar, Dist.Palghar-401501'
+    }, 
+    
+      'maharashtra_Parbhani': {
+      dealername : 'MAULI ELECTRICALS',  
+      address: '<br>Rachna Coloni, Manvat Rural-Manvat'
+    }, 
+
+      'maharashtra_Pune': {
+      dealername : 'PROTON POWER ',  
+      address: '<br>Office no. 14, Ground Floor, Kamate Mate Bhuruk Complex, Pawali Chouk, Dhayari, Pune - 411041'
+    }, 
+
+     'maharashtra_Satara': {
+      dealername : 'GURU GENERATORS ',  
+      address: '<br>85/85/B2 Flat No A 7, Gurumauli Apartment. Chimanpura Peth Satara. 415004'
+    }, 
+
+     'maharashtra_Sindudurg': {
+      dealername : 'S K SERVICES',  
+      address: '<br>Samadhan Mangalkaryalay, Arch Road, Kalmath, Kankavli'
+    }, 
+
+     'maharashtra_Solapur': {
+      dealername : 'SHRI ELECTRICALS & MACHANICAL WORKS',  
+      address: '<br>568, KARALE NAGAR, DEGAON, TAL-NORTH, SOLAPUR-413002'
+    }, 
+
+     'maharashtra_Thane': {
+      dealername : 'NIHALI ENTERPRISES',  
+      address: '<br>Thane'
+    }, 
+
+     //meghalaya
+
+     'meghalaya_Shillong': {
+      dealername : 'S K ENTERPRISE',  
+      address: '<br>Nongrim Hills, JJs cable point, Ryjah Shillong'
+    }, 
+   
+    // North-East 
+
+     'north_east_Guwahati Nesa': {
+      dealername : 'GENMAX',  
+      address: '<br>Malay Basar, 18, Vive kanada Path, Udaypur, Binubari, Guwahati-781016'
+    }, 
+
+    // Odisha 
+
+     'odisha_Bhubaneshwar': {
+      dealername : 'TIRUMALA SALES & SERVICES',  
+      address: '<br>Plot No 312, Bomikhal, Bhubaneswar-751010'
+    }, 
+
+     'odisha_Koraput': {
+      dealername : 'PRASANJ POWER SOLUTION',  
+      address: '<br>Padma Prabha Nivas, Jamal Cololny Jaypore, Koraput Orissa-764001'
+    },
+
+     'odisha_Sambalpur': {
+      dealername : 'APEX TRADE LINK',  
+      address: '<br>Plot No -347/1016, Unit -18 Paiknagar, Infornt of HP Petrol Pump,  Utopia  Appartment, Delta Square, Bhubaneswar -751003'
+    },
+
+    //pb_hp
+    'pb_hp_Chandigarh': {
+      dealername : 'KRISHNA ENGINEERING WORKS',  
+      address: '<br>646, aerocity , Sector-82, JLPL'
+    }, 
+
+    'pb_hp_Chandigarh': {
+      dealername : 'KRISHNA ENGINEERING WORKS',  
+      address: '<br>646, aerocity , Sector-82, JLPL'
+    }, 
+
+    // Punjab
+    'punjab_Mohali': {
+      dealername : 'SS ENTERPRISES ',  
+      address: '<br>Main Bawana Road Barwala New Delhi 110039'
+    }, 
+
+    //rajasthan
+    'rajasthan_Alwar': {
+      dealername : 'ABHA POWER PROJECTS',  
+      address: '<br>ASHOK 889, 1st "d" Road, Behind Nehru Park, Sardarpura, Jodhpur (Rajsthan)'
+    }, 
+
+     'rajasthan_Bikaner': {
+      dealername : 'VISHAL TRADERS',  
+      address: '<br>B-11, Pandit Fateh lal Nagar, Mirza Bawari Road Madanganj Kishangarh Ajmer 305 801 (Raj)'
+    }, 
+
+     'rajasthan_Jaipur': {
+      dealername : 'UNIVERSAL SERVICES ',  
+      address: '<br>201-Ganga Sagar-B-Amrapali Marg-Vaishali Nagar - Jaipur - 302016 ( Raj)'
+    }, 
+
+     'rajasthan_Jodhpur': {
+      dealername : 'ABHA POWER PROJECTS',  
+      address: '<br>ASHOK 889, 1st "d" Road, Behind Nehru Park, Sardarpura, Jodhpur (Rajsthan)'
+    }, 
+
+     'rajasthan_Sikara': {
+      dealername : 'KUMAVAT AUTO ELECTRICAL WORKS',  
+      address: '<br>Shirrampur, Sikar RJ'
+    }, 
+
+    'rajasthan_Udaipur': {
+      dealername : 'ABHA POWER PROJECTS',  
+      address: '<br>ASHOK 889, 1st "d" Road, Behind Nehru Park, Sardarpura, Jodhpur (Rajsthan)'
+    }, 
+
+    'rajasthan_Kota': {
+      dealername : 'S M ENTERPRISES',  
+      address: '<br>E-499-A Indraprasth industrial area Road nos 6 anatpur Kota'
+    }, 
+
+    // Tamilnadu
+    
+    'tamilnadu_Chennai': {
+      dealername : 'AEROTEK',  
+      address: '<br>55,7TH, Main Road, Teachers Colony, Kolathur, Chennai-600099'
+    }, 
+
+     'tamilnadu_Coimbture': {
+      dealername : 'AK POWER SERVICE',  
+      address: '<br>1204, Shukravar Peth, Coimbture-641 001'
+    }, 
+
+     'tamilnadu_Dindigul': {
+      dealername : 'MITHULESH POWER SOLUTION',  
+      address: '<br>PLANI ROAD, DINDIGUL-624002'
+    }, 
+
+    'tamilnadu_Kanyakumari': {
+      dealername : 'S M POWER SYSTEM',  
+      address: '<br>14/105, Kasturi Bai Grammam, Theroor, Kanyakumari-629704'
+    }, 
+
+    'tamilnadu_Nagapattinaam': {
+      dealername : 'SRI SAKTHI BATTERY WORKS',  
+      address: '<br>VAISHNAV COMPLAX, I/O ALKA TALKIES, CHINDWARA'
+    }, 
+
+    'tamilnadu_Ooty': {
+      dealername : 'GULF AUTO ELECTRICALS',  
+      address: '<br>11, New JUMMA MASQUE BUILDING, LOWER BAZAR, PILLAYAR KOVIL STREET,OOTY-64300, TN'
+    }, 
+
+      'tamilnadu_Puducherry': {
+      dealername : 'SRI SAI DIESEL ENGINE SERVICES',  
+      address: '<br>No.18,100 FT Road, Ellaipillaichavady, Puducherry- 605005'
+    }, 
+
+     'tamilnadu_Salem': {
+      dealername : 'M K S POWER SYSTEMS',  
+      address: '<br>58/538 Thirumurugan Complax, Tirchy Main Road, Opp to Govt. Hr. Sec, School-Dasanaickenpatty'
+    }, 
+
+      'tamilnadu_Subhramanyapuram': {
+      dealername : 'SIME PROGRAMME',  
+      address: '<br>Old.No.112/ New.no.113, Highways Colony, Subramnyapuram, Tirchi-620020 TN'
+    }, 
+
+     'tamilnadu_Tanjavur': {
+      dealername : 'SAY GENPOWER SOLUTION',  
+      address: '<br>No.7, Singhaperumal Kulam, Thenkarai, Thirunagar, Sankarapuram Post Tanjavur- 613 009'
+    }, 
+
+    'tamilnadu_Thirnelvelly': {
+      dealername : 'RISHAB ELECTRICALS',  
+      address: '<br>90,Swami Sannathi Street, Thirunelvelly Town, TN-33'
+    },
+
+    'tamilnadu_Madurai': {
+      dealername : 'SRI MEENAKTSI GEN POWER AGENCY',  
+      address: '<br>45/19,Workshop Road,Madhurai-625001.'
+    },
+
+     'tamilnadu_Vellore': {
+      dealername : 'VELLORE GREEN POWER SOLUTION',  
+      address: '<br>1,2nd Mail Road,Muthmiz nagar, Near Galaxy Theater,Tharpadavedu, Vellore-632007'
+    },
+
+     'tamilnadu_Erode': {
+      dealername : 'SWASTIKS ENTERPRISES',  
+      address: '<br>25/2,indhu nagar,palayapalayam, Erode-638011'
+    },
+
+    // Telangana
+
+    'telangana_Hyderabad': {
+      dealername : 'AHMED AGENCIES',  
+      address: '<br>4-26/7/80, SULEMAN NAGAR, CHINTALMET,HYDRABAD'
+    },
+
+     'telangana_Jagityal': {
+      dealername : 'N9-MECHATRONICCAL',  
+      address: '<br>#7-7187/3/E, 1ST FLOOR, BESIDE SM GEN POWER SOLUTIONS,ASHOK NAGAR, JAGITYAL -505327, TELANGANA.'
+    },
+
+    // uttar_pradesh
+    
+    'uttar_pradesh_Agra': {
+      dealername : 'AAYUSHI ENTERPRISES',  
+      address: '<br>B-75, Friends Colony Shahganj, Agra-282010'
+    },
+
+    'uttar_pradesh_Aligarh': {
+      dealername : 'AAYUSHI ENTERPRISES',  
+      address: '<br>B-75, Friends Colony Shahganj, Agra-282010'
+    },
+
+     'uttar_pradesh_Bagpat': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+     'uttar_pradesh_Bijnor': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttar_pradesh_Chamoli': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+     'uttar_pradesh_Etawah': {
+      dealername : 'AAYUSHI ENTERPRISES',  
+      address: '<br>B-75, Friends Colony Shahganj, Agra-282010'
+    },
+
+    'uttar_pradesh_Kanpur': {
+      dealername : 'YASHASHVI ENTERPRISES',  
+      address: '<br>S-272,YASHODA NAGAR KUNJ VIHAR CHOURAHA,KANPUR U.P.228011'
+    },
+
+    'uttar_pradesh_Lucknow': {
+      dealername : 'SHREE ENTERPRISES',  
+      address: '<br>10A/72 VRINDAVAN COLONY,RAIBAREILY ROAD,LUCKNOW'
+    },
+
+     'uttar_pradesh_Mathura': {
+      dealername : 'AAYUSHI ENTERPRISES',  
+      address: '<br>B-75, Friends Colony Shahganj, Agra-282010'
+    },
+
+    'uttar_pradesh_Meerut': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttar_pradesh_Muzaffernagar': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttar_pradesh_Saharanpur': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttar_pradesh_Shamli': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttar_pradesh_Varanasi': {
+      dealername : 'R&R DIESEL',  
+      address: '<br>S-16/2-4A, Nepali Bagh, shivpur Varanasi'
+    },
+
+    // uttarakhand
+
+    'uttarakhand_Dehradun': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttarakhand_Haridwar': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttarakhand_Pauri Garhwal': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttarakhand_Rudraprayag': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttarakhand_Tehri Garhwal': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttarakhand_Uttarkashi': {
+      dealername : 'S S TRADING ENGINEERS',  
+      address: '<br>7, SHIVALIK ENCLAVE, NEAR ITC GATE NO.2, SAHARANPUR'
+    },
+
+    'uttarakhand_Haldwani': {
+      dealername : 'NEW SUNLIGHT MECHANICAL & ELCT ',  
+      address: '<br>Bholanath garden Kaladungi road Kathgodam Haldwani'
+    },
+
+     
+
+    //West Bengal 
+
+    'west_bengal_Alipurduar': {
+      dealername : 'AP OIL ENGINEERS',  
+      address: '<br>VIVEKANAND PALLY DURGA MANDIR ROAD.KADAMTALA. SILIGURI. Darjeeling, West Bengal, 734011'
+    },
+
+    'west_bengal_Bankura': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_Birbhim': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_Both Dinajpur': {
+      dealername : 'AP OIL ENGINEERS',  
+      address: '<br>VIVEKANAND PALLY DURGA MANDIR ROAD.KADAMTALA. SILIGURI. Darjeeling, West Bengal, 734011'
+    },
+
+     'west_bengal_Burdhwan': {
+      dealername : 'REFLEXION SERVICES',  
+      address: '<br>2/3, Uday Nagar, Kururia Danga, P.O.Amarai'
+    },
+
+     'west_bengal_Coochbehar': {
+      dealername : 'AP OIL ENGINEERS',  
+      address: '<br>VIVEKANAND PALLY DURGA MANDIR ROAD.KADAMTALA. SILIGURI. Darjeeling, West Bengal, 734011'
+    },
+
+     'west_bengal_Darjeeling': {
+      dealername : 'AP OIL ENGINEERS',  
+      address: '<br>VIVEKANAND PALLY DURGA MANDIR ROAD.KADAMTALA. SILIGURI. Darjeeling, West Bengal, 734011'
+    },
+
+     'west_bengal_East Burdwan': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+     'west_bengal_East Medinipur': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_Hawrah': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_Hoogly': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_Jalpaiguri': {
+      dealername : 'AP OIL ENGINEERS',  
+      address: '<br>VIVEKANAND PALLY DURGA MANDIR ROAD.KADAMTALA. SILIGURI. Darjeeling, West Bengal, 734011'
+    },
+
+     'west_bengal_Jalpiguri': {
+      dealername : 'SEFALI ELECTRICA & SOUND',  
+      address: '<br>JALPIGURI'
+    },
+
+     'west_bengal_Jhargram': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_Kalimpong': {
+      dealername : 'AP OIL ENGINEERS',  
+      address: '<br>VIVEKANAND PALLY DURGA MANDIR ROAD.KADAMTALA. SILIGURI. Darjeeling, West Bengal, 734011'
+    },
+
+    'west_bengal_Kolkata': {
+      dealername : 'AR CONSULTANT',  
+      address: '<br>12/1 Syed Amir Ali Avenue Park Circus Kolkatta'
+    },
+
+    'west_bengal_Malda': {
+      dealername : 'AP OIL ENGINEERS',  
+      address: '<br>VIVEKANAND PALLY DURGA MANDIR ROAD.KADAMTALA. SILIGURI. Darjeeling, West Bengal, 734011'
+    },
+
+    'west_bengal_Murshidabad': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_Nadiya': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_North 24 Parganas': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+     'west_bengal_Puruliya': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+     'west_bengal_Siliguri': {
+      dealername : 'AP OIL ENGINEERS',  
+      address: '<br>VIVEKANAND PALLY DURGA MANDIR ROAD.KADAMTALA. SILIGURI. Darjeeling, West Bengal, 734011'
+    },
+
+    'west_bengal_South 24 Parganas': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_South 24 Pgs': {
+      dealername : 'JAI MA KALI AUTO SERVICES',  
+      address: '<br>KHIRAMPUR, SUKHADEVPUR SOUTH 24 PGS.'
+    },
+
+    'west_bengal_West Burdwan': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+    'west_bengal_West Medinipur': {
+      dealername : 'A.S. CONSULTANT',  
+      address: '<br>12/1, Syed Amir Ali Avenue, Park Circus, Kolkata-700017 WB'
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+    
   
     
 
@@ -139,13 +1299,12 @@ button:hover {
   stateDropdown.addEventListener('change', populateCities);
 
   // Event listener for submit button click
-    document.getElementById('submitBtn').addEventListener('click', function() {
-    const selectedDealer = document.getElementById('dealer').value;
+    document.getElementById('submitBtn').addEventListener('click', function() { 
     const selectedState = stateDropdown.value;
     const selectedCity = cityDropdown.value;
 
     // Form a key based on selected options
-    const key = `${selectedDealer}_${selectedState}_${selectedCity}`;
+    const key = `${selectedState}_${selectedCity}`;
     console.log(key);
     
     // Fetch company information based on the key
@@ -158,178 +1317,7 @@ button:hover {
 
       let data = document.getElementById("shoData");
         
-      data.innerHTML = `Dealer Name: ${info.dealername}  <br> State: ${info.state} <br> District: ${info.district} <br> Address: ${info.address}`; 
-
-    } else {
-      alert('No information found for the selected options.');
-    }
-  });
-});
-
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dropdowns</title>
- 
-
-  <style type="text/css">
-    .container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-select, button {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-  </style>
-</head>
-<body>
-  <div class="container">
-   <label for="dealer">Select Dealer:</label>
-<select id="dealer">
-  <option value="Dealer 1">Dealer 1</option>
- 
-</select>
-
-<label for="state">Select State:</label>
-<select id="state">
-   <option value="">Select State</option>
-  <option value="andaman">Andaman</option>
-  <option value="andhra-pradesh">ANDHRA PRADESH</option>
-   <option value="arunachalpradesh">ARUNANCHAL PRADESH</option>
-</select>
-
-<label for="city">Select City:</label>
-<select id="city">
-  <option value="">Select a City</option>
-  <!-- Cities will be populated dynamically based on the selected state -->
-</select>
-
-<button id="submitBtn">Submit</button>
-
-<div id="shoData">
-  
-</div>
-  </div>
-
-  <script>
-    
-   document.addEventListener('DOMContentLoaded', function() {
-  const stateDropdown = document.getElementById('state');
-  const cityDropdown = document.getElementById('city');
-
-  // Define cities for each state
-  const citiesByState = {
-    andaman: ['Port Blair'],
-    state2: ['City X', 'City Y', 'City Z'],
-    state3: ['City P', 'City Q', 'City R']
-  };
-
-  // Map selected options to company information
-  const companyInfo = {
-    'Dealer 1_andaman_Port Blair': {
-      dealername : 'PRIDE TECH ENGINEERING WORKS',
-      state: 'Andaman And Nicobar Island',
-      district: 'South Andaman',
-      address: 'Shop No.3, 1ST Floor, Cari Road, Bathubasti, Port Blair, South Andman-744105'
-    },
-    'Dealer 1_state1_City B': {
-      dealername : 'HEMA SAI AGENCIES',
-      state: 'Andhra Pradesh',
-      district: 'Guntur',
-      address: 'D.NO.16-1-237, CHILLAKALURIPETH ROAD, NARASARAOPETH-522601'
-    },
-    'Dealer 1_state1_City C': {
-      company: 'Another Company',
-      address: 'Another Address',
-      state: 'Another State',
-      name: 'Dass',
-    },
-     'Dealer 1_state3_City P': {
-    company: 'Company PQR',
-    address: 'XYZ Address',
-    state: 'State XYZ'
-    },
-     'Dealer 1_state3_City Q': {
-    company: 'Company PQR',
-    address: 'XYZ Address',
-    state: 'State XYZ'
-    },
-  
-    
-
-  };
-
-  // Function to populate city dropdown based on selected state
-  function populateCities() {
-    const selectedState = stateDropdown.value;
-    const cities = citiesByState[selectedState] || [];
- 
-    cityDropdown.innerHTML = '<option value="">Select a City</option>';
-    cities.forEach(city => {
-      const option = document.createElement('option');
-     
-      option.value = city;
-    
-      option.textContent = city;
-     
-      cityDropdown.appendChild(option);
-
-    });
-  }
-
-  // Event listener for state dropdown change
-  stateDropdown.addEventListener('change', populateCities);
-
-  // Event listener for submit button click
-    document.getElementById('submitBtn').addEventListener('click', function() {
-    const selectedDealer = document.getElementById('dealer').value;
-    const selectedState = stateDropdown.value;
-    const selectedCity = cityDropdown.value;
-
-    // Form a key based on selected options
-    const key = `${selectedDealer}_${selectedState}_${selectedCity}`;
-    console.log(key);
-    
-    // Fetch company information based on the key
-    const info = companyInfo[key];
-   
-
-    // Display company information
-    if (info) {
-      // alert(`Company: ${info.company}\nAddress: ${info.address}\nState: ${info.state}\nName: ${info.name}`);
-
-      let data = document.getElementById("shoData");
-        
-      data.innerHTML = `Dealer Name: ${info.dealername}  <br> State: ${info.state} <br> District: ${info.district} <br> Address: ${info.address}`; 
+      data.innerHTML = ` <b>Name:</b> ${info.dealername} <br><br> <b>Address:</b> ${info.address}`; 
 
     } else {
       alert('No information found for the selected options.');
