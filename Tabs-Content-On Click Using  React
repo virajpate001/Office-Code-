@@ -1,0 +1,57 @@
+import React, { useState } from 'react';
+import './App.css';
+
+function Tabs() {
+  // State to manage active tab
+  const [activeTab, setActiveTab] = useState(1);
+
+  // Function to handle tab click
+  const handleTabClick = (tabNumber) => {
+    setActiveTab(tabNumber);
+  };
+
+  return (
+    <div>
+      {/* Tabs */}
+      <ul className="tabs">
+        {[1, 2, 3, 4, 5].map((tabNumber) => (
+          <li
+            key={tabNumber}
+            className={`tab ${activeTab === tabNumber ? 'active' : ''}`}
+            onClick={() => handleTabClick(tabNumber)}
+            data-tab={tabNumber}
+          >
+            Tab {tabNumber}
+          </li>
+        ))}
+      </ul>
+
+      {/* Tab contents */}
+      <div className="tab_content">
+        {[1, 2, 3, 4, 5].map((tabNumber) => (
+          <div
+            key={tabNumber}
+            className={`tabs_content ${activeTab === tabNumber ? 'default' : ''}`}
+            data-content={tabNumber}
+          >
+            {tabNumber === 1 ? (
+              <div>
+                <img src="img1.jpg" alt="Image 1" />
+                <h3>this is image 1</h3>
+              </div>
+            ) : null}
+            {tabNumber === 2 ? (
+              <div>
+                <img src="img2.jpg" alt="Image 2" />
+                <h3>htytyujyuj</h3>
+              </div>
+            ) : null}
+            {/* Repeat for other tab contents */}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Tabs;
